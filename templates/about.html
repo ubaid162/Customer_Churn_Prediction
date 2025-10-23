@@ -1,0 +1,83 @@
+<!-- templates/about.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>About - Churn Predictor</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url("{{ url_for('static', filename='bg.jpg') }}") no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', sans-serif;
+      color: #333;
+    }
+
+    .about-container {
+      background-color: rgba(255, 255, 255, 0.9);
+      max-width: 900px;
+      margin: 100px auto;
+      padding: 50px;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    h2 {
+      font-weight: 700;
+      color: #2c3e50;
+      margin-bottom: 20px;
+    }
+
+    h5 {
+      margin-top: 25px;
+      font-weight: 600;
+      color: #007bff;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 1.1em;
+    }
+  </style>
+</head>
+<body>
+
+  {% include 'navbar.html' %}
+
+  <div class="about-container">
+    <h2>ℹ️ About This Project</h2>
+
+    <p>The <strong>Customer Churn Prediction Web App</strong> empowers telecom companies to predict which customers are likely to discontinue their service. It simplifies machine learning and puts predictive insights in your hands with just a few clicks.</p>
+
+    <h5>📌 What is Customer Churn?</h5>
+    <p>Customer churn is when a customer stops using your service. Identifying churn risks early allows you to take retention actions like loyalty offers, support calls, or product improvements.</p>
+
+    <h5>⚙️ How Does It Work?</h5>
+    <ul>
+      <li>Accepts customer data like contract type, billing method, service usage, and tenure.</li>
+      <li>Applies pre-trained ML model using scikit-learn’s <strong>Random Forest Classifier</strong>.</li>
+      <li>Uses data preprocessing (encoding & scaling) for accurate prediction.</li>
+      <li>Returns instant results whether a customer is likely to churn or not.</li>
+    </ul>
+
+    <h5>🛠 Tech Stack</h5>
+    <ul>
+      <li><strong>Frontend:</strong> HTML5, Bootstrap 5, Jinja2</li>
+      <li><strong>Backend:</strong> Python, Flask</li>
+      <li><strong>ML:</strong> Scikit-learn, Pandas, Joblib</li>
+      <li><strong>Data:</strong> Telco Customer Churn Dataset</li>
+    </ul>
+
+    <h5>🎯 Project Goal</h5>
+    <p>To provide a user-friendly, real-time prediction system for businesses to proactively manage customer retention and reduce churn rates using artificial intelligence.</p>
+  </div>
+
+</body>
+</html>
