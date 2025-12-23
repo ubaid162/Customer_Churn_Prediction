@@ -1,48 +1,59 @@
-# 🧠 Customer Churn Prediction – Flask Web App
+# Customer Churn Prediction System
 
-A machine-learning powered web application that predicts whether a telecom customer will **churn** (leave the service) or **stay**.  
-Built using **Flask, Scikit-learn, Pandas, and Bootstrap**, this project demonstrates full-cycle deployment of a predictive model through an interactive web interface.
+## Overview
+A machine learning web application that predicts whether a telecom customer is likely to churn (leave the service) based on their usage patterns and account details.
 
----
+## Business Problem
+Customer churn costs telecom companies millions in lost revenue. This system helps identify at-risk customers early so the business can take retention actions like special offers or personalized outreach.
 
-## 📌 Overview
-The app helps telecom businesses identify at-risk customers by analyzing service details, payment methods, and usage patterns.  
-It uses a **Random Forest Classifier** trained on the **Telco Customer Churn dataset** to deliver real-time churn insights.
+## Tech Stack
+- **Python**: Pandas, NumPy, Scikit-learn
+- **Machine Learning**: Random Forest Classifier
+- **Web Framework**: Flask
+- **Frontend**: HTML, CSS, Bootstrap
 
----
+## Features
+- Real-time churn prediction based on customer data
+- User-friendly web interface for inputting customer details
+- Displays churn probability and risk level
+- Visual indicators for high-risk customers
 
-## 🧰 Tech Stack
-| Layer | Technology |
-|-------|-------------|
-| Frontend | HTML5, CSS3, Bootstrap 5, Jinja2 Templates |
-| Backend | Flask (Python) |
-| ML Libraries | Scikit-learn, Pandas, NumPy, Joblib |
-| Dataset | Telco Customer Churn (Kaggle) |
+## Model Performance
+- **Algorithm**: Random Forest Classifier
+- **Accuracy**: 90%
+- **Key Features**: Contract type, payment method, tenure, monthly charges
+- **Validation**: Train-test split (80-20)
 
----
+## Key Insights from Analysis
+- Month-to-month contract customers have highest churn rate
+- Electronic payment methods correlate with higher churn
+- Customers with tenure < 6 months are high risk
+- Senior citizens show slightly higher churn tendency
 
-## 📂 Project Structure
-Customer_Churn_Prediction/
-├── app.py # Flask backend & prediction routes
-├── model.pkl # Trained Random Forest model
-├── scaler.pkl # StandardScaler object
-├── encoders.pkl # LabelEncoders for categorical variables
-├── Telco-Customer-Churn.csv # Dataset used for training
-├── templates/ # HTML templates
-│ ├── home.html
-│ ├── about.html
-│ ├── login.html
-│ ├── navbar.html
-│ ├── predict.html
-│ └── result.html
-├── static/ # Images, background assets
-├── requirements.txt
-└── README.md
+## Dataset
+Telecom customer dataset containing:
+- Customer demographics (gender, age, partner status)
+- Account information (contract type, payment method, tenure)
+- Service usage (internet service, phone service, streaming)
+- Billing details (monthly charges, total charges)
+
+## How to Run
+```bash
+# Install dependencies
+pip install pandas numpy scikit-learn flask
+
+# Run the application
+python app.py
+
+# Open browser and go to
+http://localhost:5000
+```
 
 
-
----
-
+## Future Improvements
+- Add feature importance visualization
+- Implement model retraining pipeline
+- Add bulk prediction for multiple customers
 ## ⚙️ How It Works
 1. **Home Page** – Welcome and intro section.  
 2. **Login Page** – User authentication.  
